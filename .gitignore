@@ -1,0 +1,24 @@
+cat > .gitignore <<EOF
+# Dependencies
+node_modules/
+package-lock.json
+
+# VitePress Build & Cache
+docs/.vitepress/dist/
+docs/.vitepress/cache/
+
+# Editor Backups & Swaps
+*~
+*.swp
+*.swo
+.DS_Store
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+EOF

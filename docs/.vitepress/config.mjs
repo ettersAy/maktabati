@@ -1,0 +1,100 @@
+import { defineConfig } from 'vitepress'
+
+export default defineConfig({
+  title: 'Maktabati',
+  description: 'My Development Documentation Library',
+  ignoreDeadLinks: true,
+  
+  base: '/maktabati/',
+  
+  themeConfig: {
+    logo: '/logo.svg',
+    
+    nav: [
+      { text: 'Home', link: '/' },
+      { text: 'Projects', link: '/projects/' },
+      { text: 'Workflows', link: '/workflows/' },
+      { text: 'Guides', link: '/guides/' },
+      { text: 'Snippets', link: '/snippets/' },
+    ],
+    
+    sidebar: {
+      '/projects/': [
+        {
+          text: 'Moussawer',
+          items: [
+            { text: 'Overview', link: '/projects/moussawer/' },
+            { text: 'Architecture', link: '/projects/moussawer/architecture' },
+            { text: 'API Reference', link: '/projects/moussawer/api-reference' },
+            { text: 'Workflows', link: '/projects/moussawer/workflows' },
+            { text: 'Changelog', link: '/projects/moussawer/changelog' },
+          ],
+        },
+      ],
+      '/workflows/': [
+        { text: 'Overview', link: '/workflows/' },
+        { text: 'Git Strategy', link: '/workflows/git-strategy' },
+        { text: 'Docker & Sail', link: '/workflows/docker-sail' },
+        { text: 'CI/CD', link: '/workflows/ci-cd' },
+        { text: 'Code Review', link: '/workflows/code-review' },
+      ],
+      '/guides/': [
+        {
+          text: 'VS Code',
+          items: [
+            { text: 'Setup', link: '/guides/vscode/' },
+            { text: 'Extensions', link: '/guides/vscode/extensions' },
+            { text: 'Snippets', link: '/guides/vscode/snippets' },
+            { text: 'Shortcuts', link: '/guides/vscode/shortcuts' },
+          ],
+        },
+        {
+          text: 'Docker',
+          items: [
+            { text: 'Basics', link: '/guides/docker/' },
+            { text: 'Compose', link: '/guides/docker/compose' },
+            { text: 'Optimization', link: '/guides/docker/optimization' },
+          ],
+        },
+        {
+          text: 'AI & APIs',
+          items: [
+            { text: 'Overview', link: '/guides/ai-apis/' },
+            { text: 'OpenRouter', link: '/guides/ai-apis/openrouter' },
+            { text: 'DeepSeek', link: '/guides/ai-apis/deepseek' },
+            { text: 'Gemini', link: '/guides/ai-apis/gemini' },
+          ],
+        },
+        {
+          text: 'Linux',
+          items: [
+            { text: 'Setup', link: '/guides/linux/' },
+            { text: 'Zsh', link: '/guides/linux/zsh' },
+            { text: 'Scripts', link: '/guides/linux/scripts' },
+          ],
+        },
+      ],
+    },
+    
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/ettersAy/maktabati' },
+      { icon: 'github', link: 'https://github.com/ettersAy/moussawer' },
+    ],
+    
+    footer: {
+      message: 'Released under MIT License',
+      copyright: 'Copyright © 2026 Ayoub Etters',
+    },
+  },
+  
+  markdown: {
+    lineNumbers: true,
+    config: (md) => {
+      // Custom markdown plugins can be added here
+    },
+  },
+  
+  vite: {
+    // Custom Vite config if needed
+  },
+})
