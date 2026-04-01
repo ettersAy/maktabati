@@ -21,6 +21,16 @@ export default defineConfig({
     sidebar: {
       '/projects/': [
         {
+          text: 'Maktabati',
+          items: [
+            { text: 'Overview', link: '/projects/maktabati/' },
+            { text: 'Technology Stack', link: '/projects/maktabati/technology-stack' },
+            { text: 'How It Works', link: '/projects/maktabati/how-it-works' },
+            { text: 'File Structure', link: '/projects/maktabati/file-structure' },
+            { text: 'Customization', link: '/projects/maktabati/customization' },
+          ],
+        },
+        {
           text: 'Moussawer',
           items: [
             { text: 'Overview', link: '/projects/moussawer/' },
@@ -39,6 +49,12 @@ export default defineConfig({
         { text: 'Code Review', link: '/workflows/code-review' },
       ],
       '/guides/': [
+        {
+          text: 'Maktabati',
+          items: [
+            { text: 'Setup Guide', link: '/guides/maktabati-setup' },
+          ],
+        },
         {
           text: 'VS Code',
           items: [

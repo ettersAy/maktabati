@@ -2,8 +2,8 @@
 layout: home
 title: Maktabati
 hero:
-  name: Maktabati - Ayoub Etters
-  text: Ayoub Etters
+  name: Maktabati
+  text: By Ayoub Etters
   tagline: My Development Documentation Library A collection of projects, workflows, and technical guides
   actions:
     - theme: brand
