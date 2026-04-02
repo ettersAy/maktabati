@@ -179,7 +179,7 @@ Edit `package.json`:
 
 Create `.github/workflows/deploy.yml`:
 
-```yaml
+```yaml {v-pre}
 name: Deploy to GitHub Pages
 
 on:

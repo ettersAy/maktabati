@@ -28,6 +28,16 @@ export default defineConfig({
             { text: 'How It Works', link: '/projects/maktabati/how-it-works' },
             { text: 'File Structure', link: '/projects/maktabati/file-structure' },
             { text: 'Customization', link: '/projects/maktabati/customization' },
+            {
+              text: 'Incidents',
+              items: [
+                { text: 'All Incidents', link: '/projects/maktabati/incidents/' },
+                { text: 'Template', link: '/projects/maktabati/incidents/incident-template' },
+                { text: 'How to Document', link: '/projects/maktabati/incidents/how-to-document' },
+                { text: 'Prevention Checklist', link: '/projects/maktabati/incidents/prevention-checklist' },
+                { text: 'INC-2026-001', link: '/projects/maktabati/incidents/inc-2026-001' },
+              ],
+            },
           ],
         },
         {
@@ -106,7 +116,12 @@ export default defineConfig({
   markdown: {
     lineNumbers: true,
     config: (md) => {
-      // Custom markdown plugins can be added here
+      md.options.highlight = (str, lang) => {
+        // Fallback for unsupported languages
+        if (['gitignore', 'env'].includes(lang)) {
+          return `<pre><code>${md.utils.escapeHtml(str)}</code></pre>`
+        }
+      }
     },
   },
   
