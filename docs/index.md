@@ -26,6 +26,18 @@ features:
     title: Snippets
     details: Reusable code snippets for Laravel, Vue, and Shell
 ---
+## Quick CMD
+
+```Bash
+tree 
+  -d            List directories only.
+  -L level      Descend only level directories deep.
+  -P pattern    List only those files that match the pattern given.
+  -I pattern    Do not list files that match the given pattern.
+  --gitignore   Filter by using .gitignore files.
+  --ignore-case Ignore case when pattern matching.
+
+```
 
 ## Quick Links
 
