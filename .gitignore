@@ -21,3 +21,7 @@ docs/.vitepress/cache/
 *.log
 npm-debug.log*
 EOF
+
+# Playwright artifacts
+playwright-report/
+test-results/

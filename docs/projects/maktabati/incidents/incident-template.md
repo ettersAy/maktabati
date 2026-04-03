@@ -1,56 +1,92 @@
 ---
 title: Incident Template
-description: Blank template for documenting new incidents
+description: AI-optimized template for documenting incidents
 ---
 
 # Incident Report Template
 
-Copy this template when documenting a new incident.
+Copy this template when documenting a new incident. Optimized for AI agent analysis and future error prevention.
 
 ---
 
-## Incident Information
+## Incident Metadata
 
-| Field | Value |
-|-------|-------|
-| **Incident ID** | `INC-YYYY-NNN` |
-| **Date** | `YYYY-MM-DD` |
-| **Project** | `Maktabati / Moussawer / Other` |
-| **Status** | `🔴 Investigating / 🟡 Mitigated / ✅ Resolved` |
-| **Severity** | `Critical / High / Medium / Low` |
-| **Affected** | `What systems/users were impacted` |
-
----
-
-## Summary
-
-<!-- 2-3 sentence description of what happened -->
+| Field | Value | Notes |
+|-------|-------|-------|
+| **ID** | `INC-YYYY-NNN` | Unique identifier |
+| **Date Detected** | `YYYY-MM-DD HH:MM UTC` | When first observed |
+| **Date Resolved** | `YYYY-MM-DD HH:MM UTC` | When fix deployed |
+| **Project** | `Maktabati / Moussawer` | Which project |
+| **Component** | `CI/CD / Build / Tests / Deployment` | System affected |
+| **Severity** | `🔴 Critical / 🟠 High / 🟡 Medium / 🟢 Low` | Impact level |
+| **Status** | `Investigating / Mitigated / ✅ Resolved` | Current state |
+| **Reporter** | Name | Who found it |
 
 ---
 
-## Error Details
+## Executive Summary
 
-<!-- Paste error messages, logs, or screenshots -->
+**One-sentence description easily understood by AI and humans:**
 
-```bash
-# Example error output
-✖ rendering pages...
-build error:
-Cannot read properties of undefined (reading 'deployment')
+```
+[What happened]: Build failed in GitHub Actions
+[Why it matters]: Deployment blocked for 45 minutes
+[Quick fix]: Added v-pre directive to code block
 ```
 
 ---
 
-## Root Cause
+## Detailed Problem Statement
 
-<!-- Explain what caused the issue -->
+## Error Information
+
+**Primary Error Message:**
+```
+[Exact error text - copy/paste from logs]
+Stack trace or full error output
+```
+
+**Error Classification:**
+- **Category:** `Build Error / Runtime Error / Deploy Error / Test Failure / Manual Mistake`
+- **Error Code:** `XXXX` (if applicable)
+- **Frequency:** `First occurrence / Intermittent / Recurring`
+- **Environment:** `Local / CI/CD / Production / Staging`
+
+**Related Files:**
+- File: [`path/to/file.md`](../../../../path/to/file.md) - Line 42 - What was wrong
+- File: [`path/to/config.js`](../../../../path/to/config.js) - Line 15 - Related config
+
+---
+
+## Root Cause Analysis
+
+### What Failed?
+```
+Specific component/file that failed
+Be exact: "GitHub Actions step X failed"
+Not: "Something broke"
+```
+
+### Why Did It Fail?
+```
+The technical reason for the failure
+What condition was violated?
+What assumption was wrong?
+```
+
+### How Was It Triggered?
+```
+What action/change caused it?
+Which commit triggered it?
+Was it predictable?
+```
 
 | Aspect | Details |
 |--------|---------|
-| **What** | What failed |
-| **Why** | Why it failed |
-| **Where** | Which file/component |
-| **When** | When it was triggered |
+| **Root Cause** | Exact technical reason |
+| **Trigger** | What caused it to happen |
+| **Condition** | What made it fail (not pass before) |
+| **Pattern** | Will it happen again if...? |
 
 ---
 
@@ -67,71 +103,100 @@ Cannot read properties of undefined (reading 'deployment')
 
 ---
 
-## Solution
+## Solution Implemented
 
-### Fix Applied
+### What Was Changed?
+**File:** Path/to/file.md or file.js
+**Change Type:** Code Change / Config Change / Process Change / Documentation Update
 
-<!-- Describe the solution that worked -->
-
-```yaml
-# Example: Code change
-# File: docs/guides/maktabati-setup.md
-# Change: Added v-pre directive to code block
+**Before:**
+```
+[Original problematic code/config]
 ```
 
-### Alternative Solutions
+**After:**
+```
+[Fixed code/config]
+```
 
-| Solution | Pros | Cons |
-|----------|------|------|
-| Solution 1 | Pro | Con |
-| Solution 2 | Pro | Con |
-| Solution 3 | Pro | Con |
+**Explanation:**
+Why this fixes the problem in plain language.
+
+### Why This Solution?
+| Aspect | Value |
+|--------|-------|
+| **Tested** | Yes / No |
+| **Rollback Easy** | Yes / No |
+| **Repeatable** | Yes / No |
+| **Permanent** | Yes / No (temporary fix only?) |
 
 ---
 
-## Prevention
+## Prevention & Detection
 
-### Checklist for Future
+### How to Avoid This in Future?
 
+**Immediate Actions (Do Now):**
 - [ ] Action item 1
 - [ ] Action item 2
-- [ ] Action item 3
 
-### Documentation Updates
+**Long-Term Improvements:**
+- [ ] Improvement 1
+- [ ] Improvement 2
 
-| File | Change |
-|------|--------|
-| `path/to/file.md` | Description of change |
+### Detection Strategy
 
----
+If this happens again, look for:
+1. Error message: `[Error text that will reappear]`
+2. File pattern: `[Files that usually have this issue]`
+3. Stage: `[Build / Deploy / Test]`
+4. Action: `[If you see this, do this]`
 
-## Lessons Learned
+### Documentation Updates Needed
 
-<!-- What should the team remember from this incident? -->
-
-1. Lesson 1
-2. Lesson 2
-3. Lesson 3
-
----
-
-## References
-
-- [Link to relevant documentation](/path/to/doc)
-- [External resource](https://example.com)
-- [Related issue/PR](https://github.com/...)
+| Document | Change | Why |
+|----------|--------|-----|
+| `path/to/doc.md` | Add warning about X | Prevent others from doing this |
+| `Makefile` | Add check for Y | Catch this automatically |
 
 ---
 
-## Metadata
+## Key Learnings for AI Agents
 
-| Role | Person |
-|------|--------|
-| **Reported by** | Name |
-| **Resolved by** | Name |
-| **Reviewed by** | Name |
-| **Time to Resolution** | X hours/minutes |
+**Remember:** When you see this error in the future:
+- Error pattern: `[Exact error or similar]`
+- Most likely cause: `[Root cause we found]`
+- First thing to check: `[First debugging step]`
+- Solution proven to work: `[The fix we applied]`
+
+**Avoid:** Don't do XYZ without first checking ABC
+
+**Pattern Recognition:** This error often appears when:
+- Changing X without Y
+- Using configuration Z wrong
+- Missing step A before step B
 
 ---
 
-*Template version: 1.0 | Last updated: April 2026*
+## References & Related
+
+- **Related Incident:** [INC-2026-001](./inc-2026-001) - Similar issue
+- **Documentation:** [Link to relevant docs]
+- **PR/Commit:** [GitHub link to fix]
+- **External Resource:** [Stack Overflow / Blog post]
+
+---
+
+## Impact & Metrics
+
+| Metric | Value |
+|--------|-------|
+| **Detection Time** | X minutes from occurrence |
+| **Resolution Time** | Y hours/minutes |
+| **Downtime Caused** | Z minutes |
+| **User Impact** | None / N users / Deployment blocked |
+| **Severity Justified** | Yes / No - should be raised/lowered |
+
+---
+
+*Template version: 2.0 | Optimized for AI analysis | Last updated: April 2026*

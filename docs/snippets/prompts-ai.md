@@ -9,6 +9,25 @@ description: List of commune prompts
 
 
 ```Markdown
+
+- I have a question: "once I test localy and commit and then push and deploy, can we modify `.github/workflows/deploy.yml` to add a section to run the e2e on prod and if something fail revert ? if yes & it's commune practice implement this.
+
+- Write a complete documentation how to write a best `.github/workflows/deploy.yml` following best & commune practices. choose the section it goes to.
+
+- check & improve the documentations `docs/projects/maktabati/incidents/how-to-document.md` & `docs/projects/maktabati/incidents/incident-template.md` => the goal is to keep the incident report as light as possible but in the same time if it's give to an ai agent it will be hellpful to him to quickly identify future error or avoid making the same mistake.
+
+- Update Makefile to add more advanced cmd like " check if the server is running before running test cmd & if not propose to the user to run the server" or similar ideas.
+
+- write a complete documentation how to write the best Makefile for laravel 13 & vueJs 3 project => I'm not sure under what section this doc should go mybe workflow or snippets, so it's up to you to decide.
+
+- run e2e test, fix error, rerun the test until all error are gone.
+- write an incident report under section `docs/projects/maktabati/incidents/`
+- once all done start push proccess mean test commit push
+---
+
+```
+
+```Markdown
 My Stack:
 - OS: Linux Mint (APT, Zsh)
 - Browsers: Min 1.35.4, Chrome Dev

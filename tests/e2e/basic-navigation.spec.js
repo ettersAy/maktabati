@@ -1,8 +1,10 @@
 // tests/e2e/basic-navigation.spec.js
 import { test, expect } from '@playwright/test';
 
+const HOME_URL = process.env.E2E_BASE_URL || 'http://localhost:4173/maktabati/';
+
 test('homepage loads and navigation works', async ({ page }) => {
-  await page.goto('/');
+  await page.goto(HOME_URL);
 
   // Check title
   await expect(page).toHaveTitle(/Maktabati/);
@@ -22,7 +24,7 @@ test('homepage loads and navigation works', async ({ page }) => {
 });
 
 test('quick links work', async ({ page }) => {
-  await page.goto('/');
+  await page.goto(HOME_URL);
 
   // Test quick link to projects
   await page.click('text=Browse Projects');
@@ -30,7 +32,7 @@ test('quick links work', async ({ page }) => {
 });
 
 test('footer is present', async ({ page }) => {
-  await page.goto('/');
+  await page.goto(HOME_URL);
 
   // Check footer content
   await expect(page.locator('footer')).toContainText('Released under MIT License');

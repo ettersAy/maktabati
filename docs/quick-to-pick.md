@@ -139,12 +139,14 @@ description: All My Quick-to-Pick
 ## 🎭 E2E Testing (Playwright)
 
 ```bash
-> e2e       # Run all tests headlessly 'npx playwright test'
-> e2e-ui    # Open Playwright UI mode (Best for Senior Devs!) 'npx playwright test --ui'
-> e2e-debug # Run tests in debug mode 'npx playwright test --debug'
-> e2e-trace # View trace of a failed test 'npx playwright show-trace'
-> e2e-gen   # Open Playwright Inspector to record a test 'npx playwright codegen'
-> e2e-up    # Update Playwright browsers 'npx playwright install'
+> make e2e       # Run E2E tests, stop after the first failure
+> make e2e-f     # Run the full E2E suite even if failures occur
+> make e2e-ui    # Open Playwright UI mode
+> make e2e-report # Show Playwright HTML report
+> e2e-debug       # Run tests in debug mode 'npx playwright test --debug'
+> e2e-trace       # View trace of a failed test 'npx playwright show-trace'
+> e2e-gen         # Open Playwright Inspector to record a test 'npx playwright codegen'
+> e2e-up          # Update Playwright browsers 'npx playwright install'
 ```
 
 ---

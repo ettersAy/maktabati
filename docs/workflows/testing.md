@@ -64,13 +64,24 @@ test('homepage loads and navigation works', async ({ page }) => {
 ### Run Tests
 
 ```bash
-# Run all tests
-npx playwright test
+# Run quick E2E suite and stop on the first failure
+make e2e
 
-# Run with UI
+# Run the full E2E suite even if there are failures
+make e2e-f
+
+# Open Playwright UI mode
+make e2e-ui
+
+# Show the last generated HTML report
+make e2e-report
+```
+
+If you prefer direct Playwright commands:
+
+```bash
+npx playwright test --max-failures=1
 npx playwright test --ui
-
-# Generate report
 npx playwright show-report
 ```
 

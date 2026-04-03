@@ -1,11 +1,20 @@
 ---
 title: How to Document Incidents
-description: Step-by-step guide for creating incident reports
+description: Step-by-step guide for creating AI-readable incident reports
 ---
 
 # How to Document Incidents
 
-Complete guide for creating and publishing incident reports in Maktabati.
+Complete guide for creating incident reports optimized for both humans and AI agents.
+
+---
+
+## Quick Principle
+
+**Write as if an AI agent will read this to prevent future errors.**
+
+✅ Specific, searchable, actionable
+❌ Vague, narrative, opinions
 
 ---
 
@@ -78,6 +87,30 @@ cp docs/workflows/incidents/incident-template.md docs/workflows/incidents/inc-20
 | Document all attempted solutions | Hide failed attempts |
 | Link to related files | Leave orphaned references |
 | Use code blocks for errors | Paste unformatted text |
+| Use tables for data | Use prose for structured data |
+| Categorize the error type | Leave classification vague |
+| Explain why it failed | Just state that it failed |
+
+---
+
+## AI-Readability Guidelines
+
+### For AI Agents to Understand Future Errors
+
+**Make it machine-searchable:**
+- Use exact error messages (copy-paste verbatim)
+- Include file paths and line numbers
+- Categorize errors clearly (Build Error / Deploy Error / etc.)
+
+**Make it pattern-recognizable:**
+- Explain the trigger: "Happens when X without Y"
+- Document the condition: "Fails because Z expects..."
+- List detection signals: "Look for these symptoms..."
+
+**Make it action-oriented:**
+- Clear before/after comparison in code blocks
+- Explicit prevention checklist
+- Exact steps to reproduce (optional but helpful)
 
 ---
 

@@ -223,10 +223,11 @@ jobs:
         with:
           path: docs/.vitepress/dist
 
+```yaml {v-pre}
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: \$\{\{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
     steps:

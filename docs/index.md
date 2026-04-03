@@ -74,10 +74,10 @@ $ ddr # Remove dangling images 'docker image prune'
 ### E2E TESTING
 
 ```Bash
-$ e2e # Playwright tests 'npx playwright test'
-$ e2eui # UI mode 'npx playwright test --ui'
-$ e2ereport # Show report 'npx playwright show-report e2e/reports/html'
-
+$ make e2e       # Run E2E tests, stop after first failure
+$ make e2e-f     # Run full E2E suite even if failures occur
+$ make e2e-ui    # Open Playwright UI mode
+$ make e2e-report # Show Playwright HTML report
 ```
 
 ### LOGGING & NAVIGATION 

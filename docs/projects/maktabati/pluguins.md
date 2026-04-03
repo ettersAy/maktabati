@@ -307,7 +307,7 @@ npm run docs:build
 
 ### Example: Custom Order
 
-```javascript
+```javascript {v-pre}
 sidebar: autoSidebar({
   sections: {
     '/projects/': {
