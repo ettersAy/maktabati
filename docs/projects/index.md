@@ -12,6 +12,9 @@ Documentation for my development projects.
 |---------|-------------|--------|
 | [Maktabati](./maktabati/) | This documentation platform | ✅ Active |
 | [Moussawer](./moussawer/) | Client & Photographer platform | ✅ Active |
+## Ideas For Future Project:
+
+- Laravel/Symfony Bundle to auto generate Markdown documentation file in the 'Maktabati' format by call AI API
 
 ## Project Templates
 

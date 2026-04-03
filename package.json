@@ -9,7 +9,10 @@
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "ai:refine": "node scripts/ai-refine-node.js",
-    "deploy:preview": "./scripts/deploy-preview.sh"
+    "deploy:preview": "./scripts/deploy-preview.sh",
+    "e2e": "playwright test",
+    "e2e:ui": "playwright test --ui",
+    "e2e:report": "playwright show-report"
   },
   "repository": {
     "type": "git",
@@ -24,6 +27,7 @@
   },
   "homepage": "https://github.com/ettersAy/maktabati#readme",
   "devDependencies": {
+    "@playwright/test": "^1.40.0",
     "@vue/devtools-api": "^8.1.1",
     "autoprefixer": "^10.4.27",
     "postcss": "^8.5.8",

@@ -14,26 +14,32 @@ export default defineConfig({
     
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Projects', link: '/projects/' },
-      { text: 'Workflows', link: '/workflows/' },
-      { text: 'Guides', link: '/guides/' },
-      { text: 'Snippets', link: '/snippets/' },
+      { text: '📦 Projects', link: '/projects/' },
+      { text: '⚙️ Workflows', link: '/workflows/' },
+      { text: '📚 Guides', link: '/guides/' },
+      { text: '📝 Snippets', link: '/snippets/' },
+      { text: '⚡ Quick', link: '/quick-to-pick' },
     ],
-    
     // ✅ FIXED: Use relative path (no leading slash) + debugPrint
-    sidebar: getSidebar({
-      contentRoot: 'docs',              // ← Changed: '/docs' → 'docs'
-      contentDirs: [
-        { path: 'projects', title: '📦 Projects' },
-        { path: 'workflows', title: '⚙️ Workflows' },
-        { path: 'guides', title: '📚 Guides' },
-        { path: 'snippets', title: '📝 Snippets' },
-      ],
-      collapsible: true,
-      collapsed: true,
-      useFrontmatter: true,
-      debugPrint: true,                 // ← Added: See what plugin finds
-    }),
+    sidebar: [
+      // Manual Link
+      { text: '⚡ Quick To Pick', link: '/quick-to-pick' },
+      
+      // Auto-Generated Sections
+      ...getSidebar({
+        contentRoot: 'docs',              // ← Changed: '/docs' → 'docs'
+        contentDirs: [
+          { path: 'projects', title: '📦 Projects' },
+          { path: 'workflows', title: '⚙️ Workflows' },
+          { path: 'guides', title: '📚 Guides' },
+          { path: 'snippets', title: '📝 Snippets' },
+        ],
+        collapsible: true,
+        collapsed: true,
+        useFrontmatter: true,
+        debugPrint: true,                 // ← Added: See what plugin finds
+      }),
+    ],
     
     socialLinks: [
       { icon: 'github', link: 'https://github.com/ettersAy/maktabati' },

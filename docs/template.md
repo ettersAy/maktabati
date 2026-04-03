@@ -1,13 +1,13 @@
 ---
-title: [Project Name]
-description: Brief description of the project
+title: [Doc Name]
+description: Brief description of the doc
 ---
 
-# [Project Name]
+# [Doc Name]
 
 ## Overview
 
-[2-3 sentence description of what the project does]
+[2-3 sentence description of what the doc is about]
 
 ## Tech Stack
 
