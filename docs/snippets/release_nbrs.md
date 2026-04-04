@@ -1,5 +1,5 @@
 ---
-title: Strategy: Auto-Incrementing Release Numbers
+title: Strategy Auto-Incrementing Release Numbers
 description: To visually verify if your latest changes are live, embed a **Release Version** or **Commit Hash** in the footer.
 ---
 # Auto-Incrementing Release Numbers
